@@ -1,0 +1,13 @@
+.header {
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+#card-main {
+  margin-top: 200px;
+}
+
+.footer-text{
+    text-align: center;
+}
