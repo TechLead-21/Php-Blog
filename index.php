@@ -1,5 +1,6 @@
 <?php
-include("helper.php");
+include("postHelper.php");
+include("menuHelper.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,16 +64,7 @@ include("helper.php");
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto nav-pills">
-                    <?php 
-            $menus = menus(); 
-            foreach($menus as $menu) {
-              echo "<li class='nav-item'>";
-              echo "<a class='nav-link' href='" . $menu['url'] . "'>";
-              echo $menu['title']; 
-              echo "</a>";
-              echo "</li>";
-            }
-          ?>
+                    <?php echo menus(); ?>
                 </ul>
             </div>
         </div>
@@ -83,31 +75,7 @@ include("helper.php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <?php 
-          $posts = posts();
-          foreach($posts as $post) {
-          ?>
-                    <div class="post-preview">
-                        <a href="./post.php">
-                            <h2>
-                                <?php 
-                echo $post['title'];
-                ?>
-                            </h2>
-                        </a>
-                        <div class="intro">
-                            <div class="clearfix">
-                                <p>
-                                    <?php 
-                  echo $post['intro'];
-                  ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-          }
-          ?>
+                    <?php echo posts()?>
                     <hr>
 
                     <div class="clearfix"></div>
